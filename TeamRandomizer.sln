@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamRandomizer", "TeamRandomizer\TeamRandomizer.csproj", "{98F90AFA-700D-4D18-8EC8-875BCDF9A593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamRandomizer.Tests", "TeamRandomizer.Tests\TeamRandomizer.Tests.csproj", "{19128DA1-5465-4CC3-9041-95BA0C21FC63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98F90AFA-700D-4D18-8EC8-875BCDF9A593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F90AFA-700D-4D18-8EC8-875BCDF9A593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F90AFA-700D-4D18-8EC8-875BCDF9A593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F90AFA-700D-4D18-8EC8-875BCDF9A593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19128DA1-5465-4CC3-9041-95BA0C21FC63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19128DA1-5465-4CC3-9041-95BA0C21FC63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19128DA1-5465-4CC3-9041-95BA0C21FC63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19128DA1-5465-4CC3-9041-95BA0C21FC63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2250CB23-12D3-43D0-8451-2867FCC0DF6D}
+	EndGlobalSection
+EndGlobal
