@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TeamRandomizer.Models;
 
 namespace TeamRandomizer.Controllers
 {
@@ -39,6 +42,26 @@ namespace TeamRandomizer.Controllers
                     return 32 + (int)(TemperatureC / 0.5556);
                 }
             }
+        }
+
+        [HttpPost("[action]")]
+        public HttpResponseMessage Post([FromBody]Name name)
+        {
+            NamesRepository.AddName(name.name);
+
+            return new HttpResponseMessage(HttpStatusCode.Created);
+        }
+
+        [HttpGet("[action]")]
+        public List<string> Get()
+        {
+            return NamesRepository.Names;
+        }
+
+        [HttpGet("[action]")]
+        public void Clear()
+        {
+            NamesRepository.Names.Clear();
         }
     }
 }

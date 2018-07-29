@@ -6,11 +6,11 @@ namespace TeamRandomizer.Models
 {
     public class RandomizeTeams
     {
-        public List<Tuple<string, string>> Randomize(List<string> names)
+        public List<Team> Randomize(List<string> names)
         {
             var randomNames = names.OrderBy(a => Guid.NewGuid()).ToList();
 
-            var tuples = new List<Tuple<string, string>>();
+            var teams = new List<Team>();
 
             string prevName = "";
 
@@ -19,18 +19,18 @@ namespace TeamRandomizer.Models
                 // Every even number create a tuple and insert record into list
                 if (i % 2 == 0)
                 {
-                    var tuple = new Tuple<string, string>(prevName, randomNames[i]);
-                    tuples.Add(tuple);
-
-                    prevName = "";
+                    prevName = randomNames[i];
                 }
                 else
                 {
-                    prevName = randomNames[i];
+                    var team = new Team { Player1 = prevName, Player2 = randomNames[i] };
+                    teams.Add(team);
+
+                    prevName = "";
                 }
             }
 
-            return tuples;
+            return teams;
         }
     }
 }
